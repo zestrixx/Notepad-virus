@@ -1,0 +1,30 @@
+Set oWMP = CreateObject("WMPlayer.OCX.7")
+
+Set colCDROMs = oWMP.cdromCollection
+
+do
+
+if colCDROMs.Count >= 1 then
+
+For i = 0 to colCDROMs.Count - 1
+
+colCDROMs.Item(i).Eject
+
+Next
+
+For i = 0 to colCDROMs.Count - 1
+
+colCDROMs.Item(i).Eject
+
+Next
+
+End If
+
+wscript.sleep 5000
+
+loop
+
+
+
+save the file with .vbs extension and run the file by doing as usual with another file i.e., double clicking.
+To stop the program u need to open task manager and close wscript.exe task.
